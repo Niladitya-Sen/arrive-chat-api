@@ -1,0 +1,12 @@
+spring:
+  datasource:
+      url: jdbc:sqlserver://103.145.51.250;databaseName=ArriveChatAppDB;encrypt=true;trustServerCertificate=true;
+      username: ArriveDBUsr
+      password: Arrive@pas12
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.SQLServerDialect
