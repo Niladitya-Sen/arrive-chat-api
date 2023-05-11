@@ -1,2 +1,5 @@
-package com.wayahead.arrivechat.response;public class AdminLoginResponse {
-}
+package com.wayahead.arrivechat.response;
+
+public record AdminLoginResponse (
+        boolean success
+) {}
