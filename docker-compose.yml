@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   arrivechat:
+    restart: always
     image: arrivechat
     build:
       context: .

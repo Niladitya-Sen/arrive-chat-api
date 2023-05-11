@@ -1,4 +1,4 @@
-package com.wayahead.arrivechat;
+package com.wayahead.arrivechat.request;
 
 import java.util.Optional;
 

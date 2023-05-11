@@ -1,5 +1,9 @@
-package com.wayahead.arrivechat;
+package com.wayahead.arrivechat.controller;
 
+import com.wayahead.arrivechat.service.CustomerService;
+import com.wayahead.arrivechat.request.AddMessageRequest;
+import com.wayahead.arrivechat.table.Customer;
+import com.wayahead.arrivechat.table.Messages;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

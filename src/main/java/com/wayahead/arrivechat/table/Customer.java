@@ -1,9 +1,7 @@
-package com.wayahead.arrivechat;
+package com.wayahead.arrivechat.table;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.List;
 
 @Setter
 @Getter

@@ -1,9 +1,14 @@
-package com.wayahead.arrivechat;
+package com.wayahead.arrivechat.service;
 
+import com.wayahead.arrivechat.table.Role;
+import com.wayahead.arrivechat.repository.CustomerRepository;
+import com.wayahead.arrivechat.repository.MessageRepository;
+import com.wayahead.arrivechat.request.AddMessageRequest;
+import com.wayahead.arrivechat.table.Customer;
+import com.wayahead.arrivechat.table.Messages;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

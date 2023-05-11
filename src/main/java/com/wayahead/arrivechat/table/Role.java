@@ -1,4 +1,4 @@
-package com.wayahead.arrivechat;
+package com.wayahead.arrivechat.table;
 
 public enum Role {
     ADMIN,

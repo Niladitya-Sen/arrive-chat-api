@@ -1,5 +1,6 @@
-package com.wayahead.arrivechat;
+package com.wayahead.arrivechat.repository;
 
+import com.wayahead.arrivechat.table.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
