@@ -17,8 +17,8 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final MessageRepository messageRepository;
 
-    public List<Messages> getMessagesByUserId(String sessionId) {
-        return messageRepository.findByUserId(customerRepository.findBySessionId(sessionId).orElseThrow().getId());
+    public List<Messages> getMessagesBySessionId(String sessionId) {
+        return messageRepository.findByUserId(customerRepository.findBySessionId(sessionId).orElse(new Customer()).getId());
     }
 
     public void addMessage(AddMessageRequest request) {

@@ -23,8 +23,9 @@ public class CustomerController {
     public void addUser(@RequestBody Customer request) {
         customerService.addUser(request);
     }
+
     @GetMapping("/getChat")
     public List<Messages> getMessages(@RequestParam String sessionId) {
-        return customerService.getMessagesByUserId(sessionId);
+        return customerService.getMessagesBySessionId(sessionId);
     }
 }
