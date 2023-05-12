@@ -4,6 +4,7 @@ import com.wayahead.arrivechat.repository.AdminRepository;
 import com.wayahead.arrivechat.repository.CustomerRepository;
 import com.wayahead.arrivechat.repository.MessageRepository;
 import com.wayahead.arrivechat.request.AdminLoginRequest;
+import com.wayahead.arrivechat.request.AdminSignupRequest;
 import com.wayahead.arrivechat.request.UpdateLanguageRequest;
 import com.wayahead.arrivechat.response.AdminChatResponse;
 import com.wayahead.arrivechat.response.AdminLoginResponse;
@@ -28,9 +29,9 @@ public class AdminService {
                     false
             );
         }
-        if (admin.get().getName().equals(adminLoginRequest.name()) &&
-                admin.get().getPassword().equals(adminLoginRequest.password()) &&
-                admin.get().getEmployeeId().equals(adminLoginRequest.employeeId())) {
+        if (admin.get().getPassword().equals(adminLoginRequest.password()) && admin.get().getEmployeeId().equals(adminLoginRequest.employeeId())) {
+            admin.get().setLanguage(adminLoginRequest.language());
+            adminRepository.save(admin.get());
             return new AdminLoginResponse (
                     true
             );
@@ -39,14 +40,6 @@ public class AdminService {
                     false
             );
         }
-    }
-
-    public void setAdminLanguage(UpdateLanguageRequest updateLanguageRequest) {
-        var adminOptional = adminRepository.findByEmployeeId(updateLanguageRequest.employeeId());
-        adminOptional.ifPresent(admin -> {
-            admin.setLanguage(updateLanguageRequest.language());
-            adminRepository.save(admin);
-        });
     }
 
     public List<AdminChatResponse> getAllChats() {
@@ -59,7 +52,7 @@ public class AdminService {
         return adminChatResponses;
     }
 
-    public void adminSignup(AdminLoginRequest adminSignupRequest) {
+    public void adminSignup(AdminSignupRequest adminSignupRequest) {
         adminRepository.save(
                 Admin.builder()
                         .name(adminSignupRequest.name())

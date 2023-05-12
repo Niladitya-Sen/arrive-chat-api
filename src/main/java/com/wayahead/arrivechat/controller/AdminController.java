@@ -1,6 +1,7 @@
 package com.wayahead.arrivechat.controller;
 
 import com.wayahead.arrivechat.request.AdminLoginRequest;
+import com.wayahead.arrivechat.request.AdminSignupRequest;
 import com.wayahead.arrivechat.request.UpdateLanguageRequest;
 import com.wayahead.arrivechat.response.AdminChatResponse;
 import com.wayahead.arrivechat.response.AdminLoginResponse;
@@ -17,18 +18,13 @@ public class AdminController {
     private final AdminService adminService;
 
     @PostMapping("/signup")
-    public void adminSignup(@RequestBody AdminLoginRequest adminSignupRequest) {
+    public void adminSignup(@RequestBody AdminSignupRequest adminSignupRequest) {
         adminService.adminSignup(adminSignupRequest);
     }
 
     @PostMapping("/login")
     public AdminLoginResponse adminLogin(@RequestBody AdminLoginRequest adminLoginRequest) {
         return adminService.adminLogin(adminLoginRequest);
-    }
-
-    @PutMapping("/language")
-    public void updateLanguage(@RequestBody UpdateLanguageRequest updateLanguageRequest) {
-        adminService.setAdminLanguage(updateLanguageRequest);
     }
 
     @GetMapping("/chats")

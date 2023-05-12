@@ -14,5 +14,6 @@ F:\Projects\chat-app\arrivechat\src\main\java\com\wayahead\arrivechat\service\Ad
 F:\Projects\chat-app\arrivechat\src\main\java\com\wayahead\arrivechat\repository\AdminRepository.java
 F:\Projects\chat-app\arrivechat\src\main\java\com\wayahead\arrivechat\request\UpdateLanguageRequest.java
 F:\Projects\chat-app\arrivechat\src\main\java\com\wayahead\arrivechat\table\Admin.java
+F:\Projects\chat-app\arrivechat\src\main\java\com\wayahead\arrivechat\request\AdminSignupRequest.java
 F:\Projects\chat-app\arrivechat\src\main\java\com\wayahead\arrivechat\response\AdminLoginResponse.java
 F:\Projects\chat-app\arrivechat\src\main\java\com\wayahead\arrivechat\request\AdminLoginRequest.java
