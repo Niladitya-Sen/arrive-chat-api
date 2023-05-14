@@ -23,7 +23,7 @@ public class CustomerService {
 
     public void addMessage(AddMessageRequest request) {
         var customer = customerRepository.findBySessionId(request.sessionId());
-        System.out.println(request.language() + request.sessionId());
+
         if (customer.isPresent()) {
             var newMessage = Messages.builder()
                     .userId(customer.get().getId())

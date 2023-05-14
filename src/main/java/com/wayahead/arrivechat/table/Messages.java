@@ -15,13 +15,14 @@ public class Messages {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
 
     @Column(name = "userId", nullable = false)
-    private Long userId;
+    private Integer userId;
 
-    String msgBy;
-    String text;
-    String language;
-    String time;
+    private String msgBy;
+    private String text;
+    private String translatedText;
+    private String language;
+    private String time;
 }

@@ -2,7 +2,6 @@ package com.wayahead.arrivechat.controller;
 
 import com.wayahead.arrivechat.request.AdminLoginRequest;
 import com.wayahead.arrivechat.request.AdminSignupRequest;
-import com.wayahead.arrivechat.request.UpdateLanguageRequest;
 import com.wayahead.arrivechat.response.AdminChatResponse;
 import com.wayahead.arrivechat.response.AdminLoginResponse;
 import com.wayahead.arrivechat.service.AdminService;
