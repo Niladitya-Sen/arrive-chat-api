@@ -29,6 +29,7 @@ public class CustomerService {
                     .userId(customer.get().getId())
                     .msgBy(request.msgBy())
                     .text(request.text())
+                    .translatedText(request.translatedText())
                     .language(request.language())
                     .time(request.time())
                     .build();
